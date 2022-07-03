@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  postgres-db:
+    build: ./postgres-db
+    volumes:
+      - ./posgres-db/pgdata/pgdata
+    ports:
+      - 5434
+    entrypoint:
+      - POSTGRES_USER=postal
+      - POSTGRES_PASSWORD=qwery_1
+      - PGDATA=/pgdata
+      - POSTGRES_DB=todo_db
