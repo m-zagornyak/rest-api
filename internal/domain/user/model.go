@@ -1,7 +1,7 @@
-package todo
+package user
 
 type User struct {
-	Id       int    `json:"-"`
+	UUID     int    `json:"-"`
 	Name     string `json:"name"`
 	Username string `json:"username"`
 	Password string `json:"password"`

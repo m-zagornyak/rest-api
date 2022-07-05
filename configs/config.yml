@@ -1,8 +1,14 @@
+---
+
 is_debug: true
-port: "8080"
+listen:
+  type: port
+  port: 8080
 
 storage:
-  host: localhost
-  database: postgres
+  host: "localhost"
+  port: "5432"
+  database: tododb
   username: postgres
-  password: qwerty_1
+  password: 11110808
+  maxAttempts: 5
