@@ -6,15 +6,16 @@ import (
 )
 
 type Server struct {
-	httpserver *http.Server
+	httpServer *http.Server
 }
 
-func (s *Server) RunServer(port string) error {
-	s.httpserver = &http.Server{
+func (s *Server) NewServer(port string, handler http.Handler) error {
+	s.httpServer = &http.Server{
 		Addr:           ":" + port,
+		Handler:        handler,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
-	return s.httpserver.ListenAndServe()
+	return s.httpServer.ListenAndServe()
 }

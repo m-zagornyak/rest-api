@@ -6,3 +6,8 @@ type Item struct {
 	Description string `json:"description"`
 	Done        *bool  `json:"done"`
 }
+
+type ItemList struct {
+	Id    string `json:"id"`
+	Title string `json:"title"`
+}
