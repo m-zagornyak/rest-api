@@ -7,8 +7,8 @@ import (
 func main() {
 	gin.DisableConsoleColor()
 
-	// Logging to a file.
+
 
 	r := gin.Default()
-	r.Run()
+	r.Run(":8080")
 }
